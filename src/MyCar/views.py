@@ -3,6 +3,7 @@ from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.urls import reverse_lazy
 
+
 # Permet de récupérer tous les données de notre models
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 
@@ -41,3 +42,4 @@ class MyCarDelete(DeleteView):
     model = CarPost
     success_url = reverse_lazy("posts:home")
     context_object_name = "post"
+    
