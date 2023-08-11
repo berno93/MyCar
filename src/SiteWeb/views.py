@@ -5,5 +5,5 @@ date = datetime.today()
 
 
 def index(request):
-    return render(request, "index.html", context={"prenom":"Berno", "date": date})
+    return render(request, "SiteWeb/index.html", context={"date": date})
 

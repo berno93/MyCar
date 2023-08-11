@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>{{ post.title }}</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="info-detail">
+        <img src="{{ post.photo.url }}" alt="{{ post.title }}" class="img-info">
+        <div class="info-info-detail">
+            <h1>{{ post.title }}</h1>
+            <h2> Prix :{{ post.price }} €</h2>
+            <div>{{ post.content|linebreaks|safe }}</div>
+            <h5>Crée le {{ post.created_on|date:'j F Y' }}</h5>
+        </div>
+        
+    </div>
+
+{% endblock %}

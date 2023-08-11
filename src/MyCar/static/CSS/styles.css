@@ -1,0 +1,88 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+#mycar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+img{
+    width: 500px;
+    height: 375px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.voiture-list{
+    border: 1px solid;
+    border-radius: 30px;
+    width: min-content;
+    display: block;
+    margin-bottom: 100px;
+    background-color: white;
+}
+
+.voiture-list h2{
+    text-align: center;
+    margin: 15px;
+}
+
+h1 {
+    margin-bottom: 50px !important;
+}
+
+#plus-dinfos, #action{
+    text-align: center;
+}
+
+*{
+    font-family: 'Abel', sans-serif;
+}
+
+#plus-dinfos{
+    margin-bottom: 15px;
+}
+
+.info-list{
+    padding: 10px;
+}
+
+input, textarea{
+    display: block;
+    padding: .75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    min-width: 600px;
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 1rem 0;
+}
+
+.info-detail{
+    border: 1px solid;
+    border-radius: 30px;
+    width: min-content;
+    display: block;
+    margin-bottom: 100px;
+    background-color: white;
+    text-align: center;
+    margin: 15px;
+}
+
+.img-info{
+    width: 500px;
+    height: 375px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.info-info-detail{
+    padding: 10px;
+}

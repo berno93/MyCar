@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'livereload',
     'django.contrib.staticfiles',
+    'MyCar'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'SiteWeb.urls'
@@ -55,7 +58,9 @@ ROOT_URLCONF = 'SiteWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "SiteWeb/templates")],
+        'DIRS': [os.path.join(BASE_DIR, "SiteWeb/templates"),
+                 os.path.join(BASE_DIR, "templates")
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +81,12 @@ WSGI_APPLICATION = 'SiteWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mycar',
+        'USER': 'mycaradmin',
+        'PASSWORD' : '123456',
+        'HOST' : 'localhost',
+        'PORT' : '5432',
     }
 }
 
@@ -120,3 +129,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 APPEND_SLASH = True
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "SiteWeb/static"),
+    os.path.join(BASE_DIR, "static"),
+]
+
+MEDIA_URL = 'images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
